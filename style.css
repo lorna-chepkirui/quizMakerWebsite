@@ -23,15 +23,15 @@ img{
     text-align: center;
     padding: 0.8rem 0;
     font-size: 3rem;
-    color: blue;
-    background: white;
+    color: rgb(49,70,7);
+    background: rgba(105,224,90,0.55);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .questions{
     margin: 3rem auto;
     width: 90vw;
     padding: 2rem;
-    background: white;
+    background: rgba(0,255,221,0.45);
     cursor: default;
     border-radius: 1rem;
 }
@@ -41,15 +41,18 @@ img{
 .option{
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
-    border-bottom: solid 0.1rem grey;
+    border-bottom: solid 0.1rem blue;
     width: 15rem;
-    background: white;
+    background: lightblue;
     border-radius: 1rem;
+}
+.option:hover{
+    color: white;
 }
 ol{
     position: relative;
     padding: 0 1.5rem;
-    color: black;
+    color: rgb(1,73,73);
 }
 span{
     display: block;
@@ -61,7 +64,7 @@ span{
 }
 #stat{
     margin-top: 1.5rem;
-    color: black;
+    color: rgb(6,17,168);
 }
 .buttons{
     text-align: center;
@@ -72,15 +75,15 @@ button{
     outline: none;
     font-size: 1.5rem;
     border-radius: 1.5rem;
-    color: linen;
-    background: blue;
+    color: rgba(93,53,156,0.98);
+    background: rgba(161,177,19,0.82);
 }
 button:active{
     background: lavender;
 }
 #scoreboard,#answerBank{
     width: 20rem;
-    background: white;
+    background: rgba(230,230,250,0.77);
     padding: 2rem;
     text-align: center;
     margin: auto;
