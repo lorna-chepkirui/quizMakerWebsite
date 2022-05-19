@@ -1,79 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width-device-width, initial-scale=1.0">
-        <title>Quizz App</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZZLET</title>
 
-        <link rel="stylesheet" href="./style.css">
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka+One&family=Karla:wght@300&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=PT+Sans:wght@700&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!-- css file link -->
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <!-- start Quiz button -->
-    <div class="start_btn"><button>Start Quiz</button></div>
-    <!-- Info Box -->
-    <div class="info_box">
-        <div class="info-title"><span>TAKE NOTE</span></div>
-        <div class="info-list">
-            <div class="info">1. You can't exit from the Quiz while you're playing.</div>
-            <div class="info">2. You can't select any option once time goes off.</div>
-            <div class="info">3. Once you select your answer, it can't be undone.</div>
-            <div class="info">4. You will have only <span>15 seconds</span> per each question.</div>
-            <div class="info">5. You'll get points on the basis of your correct answers.</div>
+    <img src="./logo.jpeg" alt="img" id="img" class="img">
+    <h1 id="title">YOUR QUIZZLET</h1>
+
+    <!-- quiz-container -->
+    <div id="quiz-container">
+        <!-- question container -->
+        <div class="questions">
+            <h2 id="question"></h2>
+            <ol type="A">
+                <li class="option"><span id="option0" onclick="calcScore(this)"></span></li>
+                <li class="option"><span id="option1" onclick="calcScore(this)"></span></li>
+                <li class="option"><span id="option2" onclick="calcScore(this)"></span></li>
+                <li class="option"><span id="option3" onclick="calcScore(this)"></span></li>
+            </ol>
+            <h4 id="stat"></h4>
         </div>
+
         <div class="buttons">
-            <button class="quit">Exit Quiz</button>
-            <button class="restart">Continue</button>
+            <button type="button" class="next">Next</button>
         </div>
+
     </div>
-    <!-- Quiz Box -->
-    <div class="quiz_box">
-        <header>
-            <div class="title">QUIZZ APP</div>
-            <div class="timer">
-                <div class="time_left_txt">Time Left</div>
-                <div class="timer_sec">15</div>
-            </div>
-            <div class="time_line"></div>
-        </header>
-        <section>
-            <div class="que_text">
-                <!-- Here I've inserted question from JavaScript -->
-            </div>
-            <div class="option_list">
-                <!-- Here I've inserted options from JavaScript -->
-            </div>
-        </section>
-        <!-- footer of Quiz Box -->
-        <footer>
-            <div class="total_que">
-                <!-- Here I've inserted Question Count Number from JavaScript -->
-            </div>
-            <button class="next_btn">Next Question</button>
-        </footer>
+
+    <!-- scoreboard section -->
+    <div id="scoreboard">
+        <img src="./logo.jpeg" alt="">
+        <h2 id="score-title">Your Score</h2>
+        <h2 id="score"></h2>
+        <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
+        <button type="button" id="check-answer" onclick="checkAnswer()">Check Answers</button>
     </div>
-    <!-- Result Box -->
-    <div class="result_box">
-        <div class="icon">
-            <i class="fas fa-crown"></i>
-        </div>
-        <div class="complete_text">WOW!!YOU DID IT!</div>
-        <div class="score_text">
-            <!-- Here I've inserted Score Result from JavaScript -->
-        </div>
-        <div class="buttons">
-            <button class="restart">Replay Quiz</button>
-            <button class="quit">Quit Quiz</button>
-        </div>
+
+    <!-- answers section -->
+    <div id="answerBank">
+        <h2>Answers :</h2>
+        <ol type="1" id="answers">
+
+        </ol>
+        <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
     </div>
-    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
-    <script src="./quiz.js"></script>
-    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+
+    <!-- javascript file source -->
     <script src="./script.js"></script>
+    <script src="./quiz.js"></script>
 </body>
-</html>
 </html>

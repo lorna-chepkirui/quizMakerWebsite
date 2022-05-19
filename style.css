@@ -1,52 +1,107 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
-
 body{
-    background-color: coral;
+    font-family: sans-serif;
+    background: linear-gradient(115deg, rgba(101,151,209,0.8),rgba(202,102,211,0.5)),url(/quizbg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
-
-.start-btn,
-.box-quiz{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+img{
+    width: 5.5rem;
+    height: 5.2rem;
+    border-radius: 50%;
 }
-
-.start-btn button{
-    font-size: 25px;
-    font-weight: 500;
-    color: darkgreen;
-    padding: 15px 30px;
-    outline: none;
+.img{
+    position: fixed;
+}
+#title{
+    text-align: center;
+    padding: 0.8rem 0;
+    font-size: 3rem;
+    color: blue;
+    background: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.questions{
+    margin: 3rem auto;
+    width: 90vw;
+    padding: 2rem;
+    background: white;
+    cursor: default;
+    border-radius: 1rem;
+}
+#question{
+    margin-bottom: 1rem;
+}
+.option{
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    border-bottom: solid 0.1rem grey;
+    width: 15rem;
+    background: white;
+    border-radius: 1rem;
+}
+ol{
+    position: relative;
+    padding: 0 1.5rem;
+    color: black;
+}
+span{
+    display: block;
+    padding: 0.1rem 0.7rem;
+    border-radius: 1rem;
+}
+#answer{
+    margin-top: 2.5rem;
+}
+#stat{
+    margin-top: 1.5rem;
+    color: black;
+}
+.buttons{
+    text-align: center;
+}
+button{
+    padding: 0.2rem 1.5rem;
     border: none;
-    border-radius: 5px;
-    border-color: beige;
-    cursor: pointer;
-
+    outline: none;
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+    color: linen;
+    background: blue;
 }
-
-.box-quiz{
-    width: 550px;
-    background-color: beige;
-    border-radius: 5px;
+button:active{
+    background: lavender;
 }
-
-.box-quiz header{
-    height: 70px;
-    padding: 0 30px;
-    background-color: beige;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 5px 5px 0 0;
-    box-shadow: 0px 3px 5px 1px rgba(0,0,0,0,1);
+#scoreboard,#answerBank{
+    width: 20rem;
+    background: white;
+    padding: 2rem;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 5rem;
+    display: none;
 }
-
-
-
+#score-title{
+    margin: 1rem 0;
+}
+#score-btn,#check-answer{
+    margin-top: 1rem;
+}
+#score{
+    font-size: 2.5rem;
+}
+#answerBank li{
+    text-align: left;
+    margin-bottom: 0.2rem;
+    font-size: larger;
+}
+#answers{
+    margin-top: 1rem;
+}
